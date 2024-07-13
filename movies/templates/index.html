@@ -1,0 +1,14 @@
+
+{%{% extends "base.html"%}
+    {%block title%}{{movie}}{%endblock title%}
+    {%block content%}
+            <p class="p-2">Hola, este es tu primer sitio en Django</p>
+            <ul class="list-group">
+                {% for movie in movie %}
+                <li class="list-group-item">
+                    <a href="movie/{{movie.pk}}">{{ movie | capfirst }}</a>
+                    <p>{{movie.name}}</p>
+                </li>
+                {% endfor %}
+            </ul>
+    {%endblock content%}{%endblock content%}
